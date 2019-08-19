@@ -12,6 +12,8 @@ If you want to find a different logo, [this page](https://dribbble.com/search?q=
 
 We haven't gone over everything there is to know about Core Graphics drawing. That said, you have enough knowledge that learning something new (such as arcs, curves, etc.) shouldn't be too difficult. Big Nerd Ranch has a great [blog post](https://www.bignerdranch.com/blog/core-graphics-part-4-a-path-a-path/) that explains different ways to draw with helpful gifs to demonstrate what the code would look like. 
 
+**NOTE:** try to draw your logo in such a way that it doesn't rely on exact numbers for positions, i.e. `        context.addLine(to: CGPoint(x: 93, y: 83.2))`. Instead try to do things proportionally so the drawing can scale no matter what the size of the view is. For example: `context.addLine(to: CGPoint(x: shieldRect.midX * 0.75, y: shieldRect.maxY))`.
+
 1. Create a new Xcode project
 2. Create a subclass of `UIView` called `LogoView`. In this class, override the `draw` method to draw your logo.
 3. You can either create the view, add it as a subview, and constrain it programmatically, or drag a `UIView` onto the storyboard scene, constrain it, and set its class to `LogoView` there. 
