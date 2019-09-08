@@ -1,7 +1,5 @@
 # Logo
 
-The goal of this project is to have you take a logo and draw it in a custom view.
-
 The purpose of this project is for you to practice drawing with Core Graphics; if you are able to create a logo, you should feel fairly comfortable with drawing any custom views. As everything shown on the screen is a `UIView` or a subclass of it, you can override the way anything looks by drawing it yourself.
 
 ### Requirements
