@@ -130,14 +130,32 @@ class LogoView: UIView {
             context.fillPath()
         
         // Red Long Oval
+            let longRedCircleTop = CGRect(x: gridSquare * 5, y: gridSquare * 10, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: longRedCircleTop)
+            context.setFillColor(redColor.cgColor)
+            context.fillPath()
+            
+            let longRedCircleBottom = CGRect(x: gridSquare * 5, y: gridSquare * 15, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: longRedCircleBottom)
+            context.setFillColor(redColor.cgColor)
+            context.fillPath()
+            
+            let longRedRectangle = CGRect(x: gridSquare * 5, y: gridSquare * 12, width: smallSquareSize * 2, height: largeRectangleSize)
+            context.addRect(longRedRectangle)
+            context.setFillColor(redColor.cgColor)
+            context.fillPath()
         
         // Red Short Oval
+            let smallRedCircle = CGRect(x: 0, y: gridSquare * 10, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: smallRedCircle)
+            context.setFillColor(redColor.cgColor)
+            context.fillPath()
+            
+            let smallRedSquare = CGRect(x: gridSquare * 2, y: gridSquare * 10, width: smallSquareSize, height: smallSquareSize)
+            context.addRect(smallRedSquare)
+            context.setFillColor(redColor.cgColor)
+            context.fillPath()
         
         }
     }
-    
 }
-
-//  make the logo a percentage of the screen
-//  make the logo elements a percentage of the overall logo size
-//  make the padding between the elements a percentage of the elements
