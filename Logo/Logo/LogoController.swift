@@ -12,11 +12,45 @@ import UIKit
 @IBDesignable
 class LogoView: UIView {
     
-
+    // MARK: - Properties
     
+    // set the colors of the logo using RGB values
+    private let blueColor = UIColor(displayP3Red: CGFloat(54/255.0), green: CGFloat(197/255.0), blue: CGFloat(240/255.0), alpha: CGFloat(1.0))
+    private let greenColor = UIColor(displayP3Red: CGFloat(46/255.0), green: CGFloat(182/255.0), blue: CGFloat(125/255.0), alpha: CGFloat(1.0))
+    private let yellowColor = UIColor(displayP3Red: CGFloat(236/255.0), green: CGFloat(178/255.0), blue: CGFloat(46/255.0), alpha: CGFloat(1.0))
+    private let redColor = UIColor(displayP3Red: CGFloat(224/255.0), green: CGFloat(30/255.0), blue: CGFloat(90/255.0), alpha: CGFloat(1.0))
+    
+    
+    // MARK: - View Lifecycle
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = UIColor.clear
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        backgroundColor = UIColor.clear
+    }
     
     override func draw(_ rect: CGRect) {
+        
+        if let context = UIGraphicsGetCurrentContext() {
+            
+            // set the relative size values of the 19x19 grid in which to build the logo
+            let gridSize: CGFloat = rect.size.width
+            let gridSquare: CGFloat = gridSize / 19
+            
+            // set the relative size values of the circles and squares within the grid
+            let circleRadius: CGFloat = gridSquare * 2
+            let smallSquareSize: CGFloat = gridSquare * 2
+            let largeSquareSize: CGFloat = gridSquare * 5
+            
         // Blue Long Oval
+            let smallBlueCircle = CGRect(x: gridSquare * 7, y: 0, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: smallBlueCircle)
+            context.setFillColor(blueColor.cgColor)
+            context.fillPath()
         
         // Blue Short Oval
         
@@ -32,6 +66,7 @@ class LogoView: UIView {
         
         // Red Short Oval
         
+        }
     }
     
 }
