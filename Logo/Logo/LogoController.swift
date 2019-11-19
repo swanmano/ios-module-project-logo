@@ -103,8 +103,31 @@ class LogoView: UIView {
             context.fillPath()
         
         // Yellow Long Oval
+            let longYellowCircleLeft = CGRect(x: gridSquare * 10, y: gridSquare * 10, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: longYellowCircleLeft)
+            context.setFillColor(yellowColor.cgColor)
+            context.fillPath()
+            
+            let longYellowCircleRight = CGRect(x: gridSquare * 15, y: gridSquare * 10, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: longYellowCircleRight)
+            context.setFillColor(yellowColor.cgColor)
+            context.fillPath()
+            
+            let longYellowRectangle = CGRect(x: gridSquare * 12, y: gridSquare * 10, width: largeRectangleSize, height: smallSquareSize * 2)
+            context.addRect(longYellowRectangle)
+            context.setFillColor(yellowColor.cgColor)
+            context.fillPath()
         
         // Yellow Short Oval
+            let smallYellowCircle = CGRect(x: gridSquare * 10, y: gridSquare * 15, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: smallYellowCircle)
+            context.setFillColor(yellowColor.cgColor)
+            context.fillPath()
+            
+            let smallYellowSquare = CGRect(x: gridSquare * 10, y: gridSquare * 15, width: smallSquareSize, height: smallSquareSize)
+            context.addRect(smallYellowSquare)
+            context.setFillColor(yellowColor.cgColor)
+            context.fillPath()
         
         // Red Long Oval
         
