@@ -44,15 +44,34 @@ class LogoView: UIView {
             // set the relative size values of the circles and squares within the grid
             let circleRadius: CGFloat = gridSquare * 2
             let smallSquareSize: CGFloat = gridSquare * 2
-            let largeSquareSize: CGFloat = gridSquare * 5
+            let largeRectangleSize: CGFloat = gridSquare * 5
             
-        // Blue Long Oval
-            let smallBlueCircle = CGRect(x: gridSquare * 7, y: 0, width: circleRadius * 2, height: circleRadius * 2)
+        // Blue Short Oval
+            let smallBlueCircle = CGRect(x: gridSquare * 5, y: 0, width: circleRadius * 2, height: circleRadius * 2)
             context.addEllipse(in: smallBlueCircle)
             context.setFillColor(blueColor.cgColor)
             context.fillPath()
+            
+            let smallBlueSquare = CGRect(x: gridSquare * 7, y: gridSquare * 2, width: smallSquareSize, height: smallSquareSize)
+            context.addRect(smallBlueSquare)
+            context.setFillColor(blueColor.cgColor)
+            context.fillPath()
         
-        // Blue Short Oval
+        // Blue Long Oval
+            let longBlueCircleLeft = CGRect(x: 0, y: gridSquare * 5, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: longBlueCircleLeft)
+            context.setFillColor(blueColor.cgColor)
+            context.fillPath()
+            
+            let longBlueCircleRight = CGRect(x: gridSquare * 5, y: gridSquare * 5, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: longBlueCircleRight)
+            context.setFillColor(blueColor.cgColor)
+            context.fillPath()
+            
+            let longBlueRectangle = CGRect(x: gridSquare * 2, y: gridSquare * 5, width: largeRectangleSize, height: smallSquareSize * 2)
+            context.addRect(longBlueRectangle)
+            context.setFillColor(blueColor.cgColor)
+            context.fillPath()
         
         // Green Long Oval
         
