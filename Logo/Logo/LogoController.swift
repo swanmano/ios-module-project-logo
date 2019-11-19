@@ -33,6 +33,8 @@ class LogoView: UIView {
         backgroundColor = UIColor.clear
     }
     
+    
+    // MARK: - Draw Logo Elements
     override func draw(_ rect: CGRect) {
         
         if let context = UIGraphicsGetCurrentContext() {
@@ -74,8 +76,31 @@ class LogoView: UIView {
             context.fillPath()
         
         // Green Long Oval
+            let longGreenCircleTop = CGRect(x: gridSquare * 10, y: 0, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: longGreenCircleTop)
+            context.setFillColor(greenColor.cgColor)
+            context.fillPath()
+            
+            let longGreenCircleBottom = CGRect(x: gridSquare * 10, y: gridSquare * 5, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: longGreenCircleBottom)
+            context.setFillColor(greenColor.cgColor)
+            context.fillPath()
+            
+            let longGreenRectangle = CGRect(x: gridSquare * 10, y: gridSquare * 2, width: smallSquareSize * 2, height: largeRectangleSize)
+            context.addRect(longGreenRectangle)
+            context.setFillColor(greenColor.cgColor)
+            context.fillPath()
         
         // Green Short Oval
+            let smallGreenCircle = CGRect(x: gridSquare * 15, y: gridSquare * 5, width: circleRadius * 2, height: circleRadius * 2)
+            context.addEllipse(in: smallGreenCircle)
+            context.setFillColor(greenColor.cgColor)
+            context.fillPath()
+            
+            let smallGreenSquare = CGRect(x: gridSquare * 15, y: gridSquare * 7, width: smallSquareSize, height: smallSquareSize)
+            context.addRect(smallGreenSquare)
+            context.setFillColor(greenColor.cgColor)
+            context.fillPath()
         
         // Yellow Long Oval
         
