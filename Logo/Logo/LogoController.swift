@@ -12,8 +12,26 @@ import UIKit
 @IBDesignable
 class LogoView: UIView {
     
+
+    
+    
     override func draw(_ rect: CGRect) {
-        // Drawing code
+        // Blue Long Oval
+        
+        // Blue Short Oval
+        
+        // Green Long Oval
+        
+        // Green Short Oval
+        
+        // Yellow Long Oval
+        
+        // Yellow Short Oval
+        
+        // Red Long Oval
+        
+        // Red Short Oval
+        
     }
     
 }
