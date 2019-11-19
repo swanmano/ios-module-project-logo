@@ -22,6 +22,14 @@
                                     <constraint firstAttribute="width" secondItem="hso-yd-nkd" secondAttribute="height" multiplier="1:1" id="naM-vW-icr"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8f-ua-cno">
+                                <rect key="frame" x="177" y="123" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Animate!"/>
+                                <connections>
+                                    <action selector="animateLogo:" destination="hso-yd-nkd" eventType="touchUpInside" id="CNB-95-Drl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
