@@ -44,12 +44,12 @@ class LogoView: UIView {
             let gridSquare: CGFloat = gridSize / 19
             
             // set the relative size values of the circles and squares within the grid
-            let circleRadius: CGFloat = gridSquare * 2
+            let circleDiameter: CGFloat = gridSquare * 4
             let smallSquareSize: CGFloat = gridSquare * 2
             let largeRectangleSize: CGFloat = gridSquare * 5
             
         // Blue Short Oval
-            let smallBlueCircle = CGRect(x: gridSquare * 5, y: 0, width: circleRadius * 2, height: circleRadius * 2)
+            let smallBlueCircle = CGRect(x: gridSquare * 5, y: 0, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: smallBlueCircle)
             context.setFillColor(blueColor.cgColor)
             context.fillPath()
@@ -60,12 +60,12 @@ class LogoView: UIView {
             context.fillPath()
         
         // Blue Long Oval
-            let longBlueCircleLeft = CGRect(x: 0, y: gridSquare * 5, width: circleRadius * 2, height: circleRadius * 2)
+            let longBlueCircleLeft = CGRect(x: 0, y: gridSquare * 5, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: longBlueCircleLeft)
             context.setFillColor(blueColor.cgColor)
             context.fillPath()
             
-            let longBlueCircleRight = CGRect(x: gridSquare * 5, y: gridSquare * 5, width: circleRadius * 2, height: circleRadius * 2)
+            let longBlueCircleRight = CGRect(x: gridSquare * 5, y: gridSquare * 5, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: longBlueCircleRight)
             context.setFillColor(blueColor.cgColor)
             context.fillPath()
@@ -76,12 +76,12 @@ class LogoView: UIView {
             context.fillPath()
         
         // Green Long Oval
-            let longGreenCircleTop = CGRect(x: gridSquare * 10, y: 0, width: circleRadius * 2, height: circleRadius * 2)
+            let longGreenCircleTop = CGRect(x: gridSquare * 10, y: 0, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: longGreenCircleTop)
             context.setFillColor(greenColor.cgColor)
             context.fillPath()
             
-            let longGreenCircleBottom = CGRect(x: gridSquare * 10, y: gridSquare * 5, width: circleRadius * 2, height: circleRadius * 2)
+            let longGreenCircleBottom = CGRect(x: gridSquare * 10, y: gridSquare * 5, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: longGreenCircleBottom)
             context.setFillColor(greenColor.cgColor)
             context.fillPath()
@@ -92,7 +92,7 @@ class LogoView: UIView {
             context.fillPath()
         
         // Green Short Oval
-            let smallGreenCircle = CGRect(x: gridSquare * 15, y: gridSquare * 5, width: circleRadius * 2, height: circleRadius * 2)
+            let smallGreenCircle = CGRect(x: gridSquare * 15, y: gridSquare * 5, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: smallGreenCircle)
             context.setFillColor(greenColor.cgColor)
             context.fillPath()
@@ -103,12 +103,12 @@ class LogoView: UIView {
             context.fillPath()
         
         // Yellow Long Oval
-            let longYellowCircleLeft = CGRect(x: gridSquare * 10, y: gridSquare * 10, width: circleRadius * 2, height: circleRadius * 2)
+            let longYellowCircleLeft = CGRect(x: gridSquare * 10, y: gridSquare * 10, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: longYellowCircleLeft)
             context.setFillColor(yellowColor.cgColor)
             context.fillPath()
             
-            let longYellowCircleRight = CGRect(x: gridSquare * 15, y: gridSquare * 10, width: circleRadius * 2, height: circleRadius * 2)
+            let longYellowCircleRight = CGRect(x: gridSquare * 15, y: gridSquare * 10, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: longYellowCircleRight)
             context.setFillColor(yellowColor.cgColor)
             context.fillPath()
@@ -119,7 +119,7 @@ class LogoView: UIView {
             context.fillPath()
         
         // Yellow Short Oval
-            let smallYellowCircle = CGRect(x: gridSquare * 10, y: gridSquare * 15, width: circleRadius * 2, height: circleRadius * 2)
+            let smallYellowCircle = CGRect(x: gridSquare * 10, y: gridSquare * 15, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: smallYellowCircle)
             context.setFillColor(yellowColor.cgColor)
             context.fillPath()
@@ -130,12 +130,12 @@ class LogoView: UIView {
             context.fillPath()
         
         // Red Long Oval
-            let longRedCircleTop = CGRect(x: gridSquare * 5, y: gridSquare * 10, width: circleRadius * 2, height: circleRadius * 2)
+            let longRedCircleTop = CGRect(x: gridSquare * 5, y: gridSquare * 10, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: longRedCircleTop)
             context.setFillColor(redColor.cgColor)
             context.fillPath()
             
-            let longRedCircleBottom = CGRect(x: gridSquare * 5, y: gridSquare * 15, width: circleRadius * 2, height: circleRadius * 2)
+            let longRedCircleBottom = CGRect(x: gridSquare * 5, y: gridSquare * 15, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: longRedCircleBottom)
             context.setFillColor(redColor.cgColor)
             context.fillPath()
@@ -146,7 +146,7 @@ class LogoView: UIView {
             context.fillPath()
         
         // Red Short Oval
-            let smallRedCircle = CGRect(x: 0, y: gridSquare * 10, width: circleRadius * 2, height: circleRadius * 2)
+            let smallRedCircle = CGRect(x: 0, y: gridSquare * 10, width: circleDiameter, height: circleDiameter)
             context.addEllipse(in: smallRedCircle)
             context.setFillColor(redColor.cgColor)
             context.fillPath()
