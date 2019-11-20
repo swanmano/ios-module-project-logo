@@ -36,8 +36,6 @@ class LogoView: UIView {
     
     // MARK: - Draw Logo Elements
     override func draw(_ rect: CGRect) {
-        
-        if let context = UIGraphicsGetCurrentContext() {
             
             // set the relative size values of the 19x19 grid in which to build the logo
             let gridSize: CGFloat = rect.size.width
@@ -115,10 +113,9 @@ class LogoView: UIView {
             
             let smallRedSquare = CGRect(x: gridSquare * 2, y: gridSquare * 10, width: smallSquareSize, height: smallSquareSize)
             addRectangle(addRect: smallRedSquare, withColor: redColor)
-        
-        }
     }
     
+    // MARK: - Helper Functions
     func addRectangle(addRect rectangle: CGRect, withColor color: UIColor) {
         if let context = UIGraphicsGetCurrentContext() {
             context.addRect(rectangle)
@@ -135,7 +132,10 @@ class LogoView: UIView {
         }
     }
     
+    // MARK: - Actions
     @IBAction func animateLogo(_ sender: UIButton) {
+        
+        // The animation fades in the logo, enlarges it, and spins it once.
         self.alpha = 0.0
         let animationBlock = {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
