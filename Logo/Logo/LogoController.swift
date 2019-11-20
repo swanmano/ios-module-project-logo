@@ -50,112 +50,88 @@ class LogoView: UIView {
             
         // Blue Short Oval
             let smallBlueCircle = CGRect(x: gridSquare * 5, y: 0, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: smallBlueCircle)
-            context.setFillColor(blueColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: smallBlueCircle, withColor: blueColor)
             
             let smallBlueSquare = CGRect(x: gridSquare * 7, y: gridSquare * 2, width: smallSquareSize, height: smallSquareSize)
-            context.addRect(smallBlueSquare)
-            context.setFillColor(blueColor.cgColor)
-            context.fillPath()
+            addRectangle(addRect: smallBlueSquare, withColor: blueColor)
         
         // Blue Long Oval
             let longBlueCircleLeft = CGRect(x: 0, y: gridSquare * 5, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: longBlueCircleLeft)
-            context.setFillColor(blueColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: longBlueCircleLeft, withColor: blueColor)
             
             let longBlueCircleRight = CGRect(x: gridSquare * 5, y: gridSquare * 5, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: longBlueCircleRight)
-            context.setFillColor(blueColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: longBlueCircleRight, withColor: blueColor)
             
             let longBlueRectangle = CGRect(x: gridSquare * 2, y: gridSquare * 5, width: largeRectangleSize, height: smallSquareSize * 2)
-            context.addRect(longBlueRectangle)
-            context.setFillColor(blueColor.cgColor)
-            context.fillPath()
+            addRectangle(addRect: longBlueRectangle, withColor: blueColor)
         
         // Green Long Oval
             let longGreenCircleTop = CGRect(x: gridSquare * 10, y: 0, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: longGreenCircleTop)
-            context.setFillColor(greenColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: longGreenCircleTop, withColor: greenColor)
             
             let longGreenCircleBottom = CGRect(x: gridSquare * 10, y: gridSquare * 5, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: longGreenCircleBottom)
-            context.setFillColor(greenColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: longGreenCircleBottom, withColor: greenColor)
             
             let longGreenRectangle = CGRect(x: gridSquare * 10, y: gridSquare * 2, width: smallSquareSize * 2, height: largeRectangleSize)
-            context.addRect(longGreenRectangle)
-            context.setFillColor(greenColor.cgColor)
-            context.fillPath()
+            addRectangle(addRect: longGreenRectangle, withColor: greenColor)
         
         // Green Short Oval
             let smallGreenCircle = CGRect(x: gridSquare * 15, y: gridSquare * 5, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: smallGreenCircle)
-            context.setFillColor(greenColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: smallGreenCircle, withColor: greenColor)
             
             let smallGreenSquare = CGRect(x: gridSquare * 15, y: gridSquare * 7, width: smallSquareSize, height: smallSquareSize)
-            context.addRect(smallGreenSquare)
-            context.setFillColor(greenColor.cgColor)
-            context.fillPath()
+            addRectangle(addRect: smallGreenSquare, withColor: greenColor)
         
         // Yellow Long Oval
             let longYellowCircleLeft = CGRect(x: gridSquare * 10, y: gridSquare * 10, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: longYellowCircleLeft)
-            context.setFillColor(yellowColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: longYellowCircleLeft, withColor: yellowColor)
             
             let longYellowCircleRight = CGRect(x: gridSquare * 15, y: gridSquare * 10, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: longYellowCircleRight)
-            context.setFillColor(yellowColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: longYellowCircleRight, withColor: yellowColor)
             
             let longYellowRectangle = CGRect(x: gridSquare * 12, y: gridSquare * 10, width: largeRectangleSize, height: smallSquareSize * 2)
-            context.addRect(longYellowRectangle)
-            context.setFillColor(yellowColor.cgColor)
-            context.fillPath()
+            addRectangle(addRect: longYellowRectangle, withColor: yellowColor)
         
         // Yellow Short Oval
             let smallYellowCircle = CGRect(x: gridSquare * 10, y: gridSquare * 15, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: smallYellowCircle)
-            context.setFillColor(yellowColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: smallYellowCircle, withColor: yellowColor)
             
             let smallYellowSquare = CGRect(x: gridSquare * 10, y: gridSquare * 15, width: smallSquareSize, height: smallSquareSize)
-            context.addRect(smallYellowSquare)
-            context.setFillColor(yellowColor.cgColor)
-            context.fillPath()
+            addRectangle(addRect: smallYellowSquare, withColor: yellowColor)
         
         // Red Long Oval
             let longRedCircleTop = CGRect(x: gridSquare * 5, y: gridSquare * 10, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: longRedCircleTop)
-            context.setFillColor(redColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: longRedCircleTop, withColor: redColor)
             
             let longRedCircleBottom = CGRect(x: gridSquare * 5, y: gridSquare * 15, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: longRedCircleBottom)
-            context.setFillColor(redColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: longRedCircleBottom, withColor: redColor)
             
             let longRedRectangle = CGRect(x: gridSquare * 5, y: gridSquare * 12, width: smallSquareSize * 2, height: largeRectangleSize)
-            context.addRect(longRedRectangle)
-            context.setFillColor(redColor.cgColor)
-            context.fillPath()
+            addRectangle(addRect: longRedRectangle, withColor: redColor)
         
         // Red Short Oval
             let smallRedCircle = CGRect(x: 0, y: gridSquare * 10, width: circleDiameter, height: circleDiameter)
-            context.addEllipse(in: smallRedCircle)
-            context.setFillColor(redColor.cgColor)
-            context.fillPath()
+            addCircle(addCir: smallRedCircle, withColor: redColor)
             
             let smallRedSquare = CGRect(x: gridSquare * 2, y: gridSquare * 10, width: smallSquareSize, height: smallSquareSize)
-            context.addRect(smallRedSquare)
-            context.setFillColor(redColor.cgColor)
-            context.fillPath()
+            addRectangle(addRect: smallRedSquare, withColor: redColor)
         
+        }
+    }
+    
+    func addRectangle(addRect rectangle: CGRect, withColor color: UIColor) {
+        if let context = UIGraphicsGetCurrentContext() {
+            context.addRect(rectangle)
+            context.setFillColor(color.cgColor)
+            context.fillPath()
+        }
+    }
+    
+    func addCircle(addCir circle: CGRect, withColor color: UIColor) {
+        if let context = UIGraphicsGetCurrentContext() {
+            context.addEllipse(in: circle)
+            context.setFillColor(color.cgColor)
+            context.fillPath()
         }
     }
     
