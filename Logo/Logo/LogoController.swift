@@ -160,33 +160,30 @@ class LogoView: UIView {
     }
     
     @IBAction func animateLogo(_ sender: UIButton) {
+        self.alpha = 0.0
         let animationBlock = {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
-                self.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+                self.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.30) {
+                UIView.animate(withDuration: 0.5) {
+                    self.alpha = 1.0
+                }
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
+                self.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
             }
             UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25) {
                 self.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
             }
-            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.15) {
-                self.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2)
+            UIView.addKeyframe(withRelativeStartTime: 0.50, relativeDuration: 0.25) {
+                self.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 1.5)
             }
-            UIView.addKeyframe(withRelativeStartTime: 0.65, relativeDuration: 0.1) {
-                self.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 0.95)
-            }
-            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.5) {
-                self.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 1.9)
-            }
-            UIView.addKeyframe(withRelativeStartTime: 0.8, relativeDuration: 0.1) {
-                self.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 0.85)
-            }
-            UIView.addKeyframe(withRelativeStartTime: 0.9, relativeDuration: 0.4) {
-                self.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 1.7)
-            }
-            UIView.addKeyframe(withRelativeStartTime: 0.94, relativeDuration: 0.06) {
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25) {
                 self.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2)
             }
         }
-        UIView.animateKeyframes(withDuration: 5, delay: 0, options: [], animations: animationBlock, completion: nil)
+            UIView.animateKeyframes(withDuration: 5, delay: 0, options: [], animations: animationBlock, completion: nil)
     }
     
 }

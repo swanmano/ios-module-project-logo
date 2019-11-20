@@ -22,9 +22,8 @@
                                     <constraint firstAttribute="width" secondItem="hso-yd-nkd" secondAttribute="height" multiplier="1:1" id="naM-vW-icr"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8f-ua-cno">
-                                <rect key="frame" x="177" y="123" width="61" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8f-ua-cno">
+                                <rect key="frame" x="176.5" y="124" width="61" height="30"/>
                                 <state key="normal" title="Animate!"/>
                                 <connections>
                                     <action selector="animateLogo:" destination="hso-yd-nkd" eventType="touchUpInside" id="CNB-95-Drl"/>
@@ -34,6 +33,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hso-yd-nkd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2yG-Qg-5bi"/>
+                            <constraint firstItem="u8f-ua-cno" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6fX-7Q-H1t"/>
+                            <constraint firstItem="u8f-ua-cno" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="dk5-cP-vut"/>
                             <constraint firstItem="hso-yd-nkd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eFz-HT-npC"/>
                             <constraint firstItem="hso-yd-nkd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="kwN-4t-6dx"/>
                         </constraints>
