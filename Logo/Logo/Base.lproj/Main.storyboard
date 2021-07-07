@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Logo View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LogoViewController" customModule="Logo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hso-yd-nkd" customClass="LogoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="282.5" width="331" height="331"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hso-yd-nkd" secondAttribute="height" multiplier="1:1" id="naM-vW-icr"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8f-ua-cno">
+                                <rect key="frame" x="176.5" y="124" width="61" height="30"/>
+                                <state key="normal" title="Animate!"/>
+                                <connections>
+                                    <action selector="animateLogo:" destination="hso-yd-nkd" eventType="touchUpInside" id="CNB-95-Drl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hso-yd-nkd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2yG-Qg-5bi"/>
+                            <constraint firstItem="u8f-ua-cno" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6fX-7Q-H1t"/>
+                            <constraint firstItem="u8f-ua-cno" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="dk5-cP-vut"/>
+                            <constraint firstItem="hso-yd-nkd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eFz-HT-npC"/>
+                            <constraint firstItem="hso-yd-nkd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="kwN-4t-6dx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="logoView" destination="hso-yd-nkd" id="Rmg-TR-PCw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="66"/>
+        </scene>
+    </scenes>
+</document>
